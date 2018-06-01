@@ -29,10 +29,6 @@
   version = "1.4.7"
 
 [[constraint]]
-  name = "github.com/go-siris/siris"
-  version = "7.4.0"
-
-[[constraint]]
   name = "github.com/labstack/echo"
   version = "3.3.5"
 

@@ -2,8 +2,6 @@ package realize
 
 import (
 	"fmt"
-	"github.com/fsnotify/fsnotify"
-	"github.com/go-siris/siris/core/errors"
 	"go/build"
 	"log"
 	"os"
@@ -12,6 +10,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/fsnotify/fsnotify"
 )
 
 var (
@@ -94,7 +94,7 @@ func (r *Realize) Start() error {
 		}
 		wg.Wait()
 	} else {
-		return errors.New("there are no projects")
+		return NewError("there are no projects")
 	}
 	return nil
 }
